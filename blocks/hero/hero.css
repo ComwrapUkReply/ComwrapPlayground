@@ -7,16 +7,22 @@ main .hero-container {
 }
 
 .hero {
+  border-top: 2px solid #0063be;
   position: relative;
   padding: 32px;
   min-height: 300px;
 }
 
-.hero h1 {
+.hero h2 {
   max-width: 1200px;
   margin-left: auto;
+  margin-bottom: 0;
   margin-right: auto;
-  color: white;
+}
+
+.hero p {
+  color: #0063be;
+  font-size: 30px;
 }
 
 .hero picture {
