@@ -13,4 +13,38 @@ footer .footer {
 
 footer .footer p {
   margin: 0;
+  color: var(--link-color);
+}
+
+footer .footer .columns > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+footer .footer .columns > div p {
+  display: inline-block;
+  color: var(--link-color);
+}
+
+footer .footer .columns > div p a {
+  background: transparent;
+  color: black;
+  color: var(--link-color);
+  padding: 0;
+}
+
+footer .footer .columns .columns-img-col {
+  margin-left: auto;
+  flex: 0 0 auto;
+}
+
+footer .footer .columns > div picture {
+  max-width: 239px;
+  height: auto;
+  display: block;
+}
+
+footer .footer .columns > div picture img {
+  height: auto;
 }
