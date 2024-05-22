@@ -11,38 +11,28 @@
  */
 
 :root {
-  /* colors */
-  --link-color: #035fe6;
-  --link-hover-color: #136ff6;
-  --background-color: white;
-  --light-color: #eee;
-  --dark-color: #ccc;
-  --text-color: black;
+/* fonts */
+--heading-font-family: 'AlbertSans-SemiBold', Arial, sans-serif;
+--body-font-family: 'AlbertSans-Regular', Arial, sans-serif;
 
-  /* fonts */
-  --heading-font-family: "Open Sans", verdana, sans-serif;
-  --body-font-family: "Open Sans", verdana, sans-serif;
-  --fixed-font-family: "Open Sans", menlo, consolas, "Liberation Mono", monospace;
 
-  /* colors */
-  --text-color: #333333;
-  --link-color: #0063be;
-  --link-hover-color: Invalid input color;
-  --background-color: #ffffff;
-  --overlay-background-color: #eeeeee;
-  --highlight-background-color: #cccccc;
+/* colors */
+--text-color: #0073dd;
+--link-color: #0073dd;
+--link-hover-color: Invalid input color;
+--background-color: #ffffff;
+--overlay-background-color: #eeeeee;
+--highlight-background-color: #cccccc;
 
-  /* sizes */
-  --heading-font-size-xxl: 42px;
-  --heading-font-size-xl: 32px;
-  --heading-font-size-l: 28px;
-  --heading-font-size-m: 26px;
-  --heading-font-size-s: 14px;
-  --heading-font-size-xs: 13px;
-  --body-font-size-xl: 25px;
-  --body-font-size-l: 20px;
-  --body-font-size-m: 16px;
-  --body-font-size-s: 13px;
+/* sizes */
+--heading-font-size-xxl: 88px;
+--heading-font-size-xl: 64px;
+--heading-font-size-l: 44px;
+--heading-font-size-m: 32px;
+--heading-font-size-s: 24px;
+--heading-font-size-xs: 20px;
+--body-font-size-m: 20px;
+
 }
 
 
