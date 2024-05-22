@@ -18,14 +18,14 @@
 
 @font-face {
   font-family: "AlbertSans-Regular";
-  src: url("../resources/fonts/174a2b53d78afce0bf13929f8dc3a5ab.ttf") format("truetype");
+  src: url("../fonts/174a2b53d78afce0bf13929f8dc3a5ab.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: "AlbertSans-SemiBold";
-  src: url("../resources/fonts/37718261963c735d271c6bae4a1469cd.ttf") format("truetype");
+  src: url("../fonts/37718261963c735d271c6bae4a1469cd.ttf") format("truetype");
   font-weight: 600;
   font-style: normal;
 }
