@@ -2,6 +2,8 @@ footer {
   padding: 2rem;
   background-color: var(--light-color);
   font-size: var(--body-font-size-s);
+  background: -webkit-gradient(linear, right top, left top, from(#fff), color-stop(80%, #f7f6f5));
+    background: linear-gradient(270deg, #fff, #f7f6f5 80%);
 }
 
 footer .footer {
