@@ -15,7 +15,7 @@ header nav {
   align-items: center;
   gap: 0 2em;
   margin: auto;
-  max-width: 1264px;
+  max-width: 1520px;
   height: var(--nav-height);
   padding: 0 1rem;
   font-family: var(--body-font-family);
@@ -45,6 +45,8 @@ header nav[aria-expanded="true"] {
   header nav[aria-expanded="true"] {
     min-height: 0;
     overflow: visible;
+    display: flex;
+    flex-wrap: wrap;
   }
 }
 
@@ -55,6 +57,8 @@ header nav p {
 
 header nav a:any-link {
   color: currentcolor;
+  color: black;
+  font-family: var(--heading-font-family);
 }
 
 /* hamburger */
@@ -145,15 +149,25 @@ header .nav-brand {
   font-size: var(--heading-font-size-s);
   font-weight: 700;
   line-height: 1;
+  order: 2;
+  flex: 0 0 20%;
+}
+
+header .nav-brand > div {
+  position: relative;
+  top: -3rem;
+  min-height: 100px;
 }
 
 header nav .nav-brand img {
-  width: 128px;
+  width: 178px;
   height: auto;
 }
 
 /* sections */
 header nav .nav-sections {
+  order: 3;
+  flex: 0 0 47%;
   grid-area: sections;
   flex: 1 1 auto;
   display: none;
@@ -228,6 +242,7 @@ header nav .nav-sections ul > li > ul > li {
     gap: 2em;
     margin: 0;
     font-size: var(--body-font-size-xs);
+    justify-content: flex-end;
   }
 
   header nav .nav-sections .default-content-wrapper > ul > li {
@@ -272,14 +287,29 @@ header nav .nav-sections ul > li > ul > li {
 /* tools */
 header nav .nav-tools {
   grid-area: tools;
+  order: 0;
+  flex-basis: 100%;
 }
+
+header nav .nav-tools > div {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+header nav .nav-tools a.button:any-link {
+  background-color: transparent;
+  color: var(--link-color);
+}
+
 
 /* breadcrumbs */
 .breadcrumbs {
   display: none;
   width: 100%;
   height: var(--breadcrumbs-height);
-  max-width: 1200px;
+  /* max-width: 1200px; */
   overflow: hidden;
   margin: 0 auto;
   font-size: var(--breadcrumbs-font-size);

@@ -59,7 +59,7 @@ body {
   margin: 0;
   font-family: var(--body-font-family);
   line-height: 1.6;
-  color: var(--text-color);
+  color: black;
   background-color: var(--background-color);
   display: none;
 }
@@ -75,7 +75,7 @@ header {
 h1, h2, h3,
 h4, h5, h6 {
   font-family: var(--heading-font-family);
-  color: var(--link-color);
+  color: black;
   font-weight: 100;
   line-height: 1.25;
   margin-top: 1em;
@@ -83,8 +83,8 @@ h4, h5, h6 {
   scroll-margin: calc(var(--nav-height) + 1em);
 }
 
-h1 { font-size: var(--heading-font-size-xxl) }
-h2 { font-size: var(--heading-font-size-xl) }
+h1 { font-size: 88px }
+h2 { font-size: 64px }
 h3 { font-size: var(--heading-font-size-l) }
 h4 { font-size: var(--heading-font-size-m) }
 h5 { font-size: var(--heading-font-size-s) }
@@ -194,7 +194,7 @@ main .section {
 
 @media (width >= 900px) {
   .section > div {
-    max-width: 1200px;
+    max-width: 1520px;
     margin: auto;
   }
 }
@@ -207,6 +207,26 @@ main .section.highlight {
 
 
 main {
-  max-width: 1210px;
+  max-width: 1520px;
   margin-inline: auto;
+}
+
+.default-content-wrapper h1 {
+  margin: 0;
+}
+
+.default-content-wrapper h1 + p {
+  font-size: 32px;
+
+  font-family: var(--heading-font-family);
+  color: black;
+}
+
+.blue {
+  background: #0c2863;
+  margin: 0 calc(-50vw + 50%);
+}
+
+.blue  * {
+  color: white !important;
 }
