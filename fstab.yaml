@@ -1,2 +1,4 @@
 mountpoints:
-  /: https://drive.google.com/drive/folders/1LSY-dVTyWrrs5WW7pDIrHPaOBihvKS_G
+  /:
+    url: https://content.da.live/ComwrapUkReply/ComwrapPlayground/
+    type: markup
