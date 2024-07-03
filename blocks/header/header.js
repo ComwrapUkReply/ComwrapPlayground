@@ -210,13 +210,7 @@ export default async function decorate(block) {
   navWrapper.className = 'nav-wrapper';
   navWrapper.append(nav);
   block.append(navWrapper);
-  
   if (getMetadata('breadcrumbs').toLowerCase() === 'true') {
     navWrapper.append(await buildBreadcrumbs());
   }
-
-  const main = document.querySelector('.columns-container')
-  const breadcrumbs = document.querySelector('.breadcrumbs')
-  main.prepend(breadcrumbs)
-  console.log(main)
 }
