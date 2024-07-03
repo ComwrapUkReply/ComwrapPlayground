@@ -15,9 +15,9 @@ import {
   loadScript,
   toCamelCase,
   loadCSS,
-} from '/scripts/aem.js';
+} from '../../../../../../scripts/aem.js';
 
-import { } from '/plusplus/src/siteConfig.js';
+import { } from '../../../../../../plusplus/src/siteConfig.js';
 
 const LCP_BLOCKS = []; // add your LCP blocks to the lis
 const AUDIENCES = {
@@ -82,7 +82,7 @@ async function loadFonts() {
 // added for modal handling, see adobe docs
 // eslint-disable-next-line no-unused-vars
 function autolinkModals(element) {
-  element.addEventListener('click', async(e) => {
+  element.addEventListener('click', async (e) => {
     const origin = e.target.closest('a');
 
     if (origin && origin.href && origin.href.includes('/modals/')) {
@@ -126,11 +126,13 @@ export function decorateMain(main) {
  */
 async function loadEager(doc) {
   document.documentElement.lang = 'en';
-  
+  if (getMetadata('breadcrumbs').toLowerCase() === 'true') {
+    document.body.classList.add('breadcrumbs-enabled');
+  }
   // Add below snippet early in the eager phase
-  if (getMetadata('experiment') ||
-    Object.keys(getAllMetadata('campaign')).length ||
-    Object.keys(getAllMetadata('audience')).length) {
+  if (getMetadata('experiment')
+    || Object.keys(getAllMetadata('campaign')).length
+    || Object.keys(getAllMetadata('audience')).length) {
     // eslint-disable-next-line import/no-relative-packages
     const { loadEager: runEager } = await import('../plusplus/plugins/experimentation/src/index.js');
     await runEager(document, { audiences: AUDIENCES }, pluginContext);
@@ -172,11 +174,11 @@ async function loadLazy(doc) {
 
   loadCSS(`${window.hlx.codeBasePath}/styles/lazy-styles.css`);
   loadFonts();
-  if ((getMetadata('experiment') ||
-    Object.keys(getAllMetadata('campaign')).length ||
-    Object.keys(getAllMetadata('audience')).length)) {
+  if ((getMetadata('experiment')
+    || Object.keys(getAllMetadata('campaign')).length
+    || Object.keys(getAllMetadata('audience')).length)) {
     // eslint-disable-next-line import/no-relative-packages
-    const { loadLazy: runLazy } = await import('/plusplus/plugins/experimentation/src/index.js');
+    const { loadLazy: runLazy } = await import('../../../../../../plusplus/plugins/experimentation/src/index.js');
     await runLazy(document, { audiences: AUDIENCES }, pluginContext);
   }
 
